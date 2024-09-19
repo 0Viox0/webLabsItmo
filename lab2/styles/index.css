@@ -4,8 +4,8 @@ body {
     font-family: "Roboto", sans-serif;
 
     background-color: #2d2d2d;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    margin: 0;
+    padding: 0;
 }
 
 .capitalize {
@@ -61,7 +61,7 @@ img.afterHeroSection__image {
 
 .header__LogoText {
     color: #d1d1d1;
-    font-size: 26px;
+    font-size: 1.6rem;
 }
 
 .header__navigation {
@@ -75,12 +75,12 @@ img.afterHeroSection__image {
 
 ul.header__navigation li a {
     color: #d1d1d1;
-    font-size: 26px;
+    font-size: 1.6rem;
 }
 
 ul.header__navigation li a:hover {
     color: #7e7e7e;
-    font-size: 26px;
+    font-size: 1.6rem;
 }
 
 .header__profile {
@@ -97,7 +97,7 @@ ul.header__navigation li a:hover {
 }
 
 .header__userName {
-    font-size: 26px;
+    font-size: 1.6rem;
     color: #d1d1d1;
     font-weight: 300;
 }
@@ -147,7 +147,7 @@ ul.header__navigation li a:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    font-size: 70px;
+    font-size: 4.3rem;
 }
 
 .hero__rightContainerButton {
@@ -157,7 +157,7 @@ ul.header__navigation li a:hover {
     border-radius: 38px;
     background: linear-gradient(0deg, #737373, #d9d9d9);
 
-    font-size: 48px;
+    font-size: 3rem;
     color: #ffffff;
     font-weight: 600;
 
@@ -172,7 +172,7 @@ ul.header__navigation li a:hover {
     background: linear-gradient(90deg, #526beb, #79acb2);
     cursor: pointer;
 
-    font-size: 48px;
+    font-size: 3rem;
     color: #ffffff;
     font-weight: 600;
 
@@ -186,7 +186,7 @@ ul.header__navigation li a:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    font-size: 70px;
+    font-size: 4.3rem;
     text-align: center;
 }
 
@@ -218,13 +218,13 @@ ul.header__navigation li a:hover {
 .afterHeroSection__imageFilmName {
     margin-top: -15%;
 
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #d1d1d1;
 }
 
 .afterHeroSection__blockquote {
-    font-size: 40px;
+    font-size: 2.5rem;
     text-align: center;
     color: #d1d1d1;
 
@@ -286,12 +286,12 @@ footer__links {
 
 ul.footer__navigation li a {
     color: #d1d1d1;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 ul.footer__navigation li a:hover {
     color: #7e7e7e;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 ul.footer__navigation li {
