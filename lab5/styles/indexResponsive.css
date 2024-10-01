@@ -1,0 +1,129 @@
+.nav__disappearResponsive {
+    display: none;
+}
+
+.nav__mobile {
+    margin-top: 10px;
+    margin-right: 25px;
+    display: block;
+}
+
+@media only screen and (min-width: 1260px) {
+    .hero__leftContainer {
+        display: flex;
+    }
+    .hero__rightContainer {
+        width: 50%;
+    }
+    .hero__rightContainerMainText {
+        text-align: start;
+    }
+}
+
+@media only screen and (min-width: 1160px) {
+    .nav__disappearResponsive {
+        display: block;
+    }
+    .nav__mobile {
+        display: none;
+    }
+    .header__navigation {
+        flex-direction: row;
+        width: 541px;
+        border: none;
+
+        position: relative;
+        right: 0px;
+    }
+    .hero__rightContainerMainText {
+        text-align: start;
+    }
+    .afterHeroSection__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .afterHeroSection__imageFilmName {
+        text-align: left;
+    }
+    .afterHeroSection__blockquote {
+        font-size: 2.5rem;
+
+        margin-top: -10%;
+        padding-right: 200px;
+    }
+    .footer__leftContainer {
+        display: block;
+    }
+    .footer_rightContainer {
+        width: 40%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    ul.header__navigation li a {
+        color: #d1d1d1;
+        font-size: 1.6rem;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .header__profilePicture {
+        display: block;
+    }
+    .header__LogoText {
+        display: block;
+    }
+    .gradient {
+        width: 1088px;
+        top: -178px;
+    }
+    .hero__rightContainerMainText {
+        font-size: 4.3rem;
+    }
+    .hero__rightContainerButton {
+        width: 335px;
+        height: 80px;
+
+        font-size: 3rem;
+    }
+    .hero__spaceSpan {
+        display: inline-block;
+    }
+    .hero__rightContainerMainText {
+        text-align: start;
+    }
+    .afterHeroSection__heading {
+        font-size: 4.3rem;
+    }
+}
+
+@media only screen and (min-width: 560px) and (max-width: 850px) {
+    .header__profilePicture {
+        display: block;
+    }
+    .header__profile {
+        width: 137px;
+    }
+    .header__LogoText {
+        display: block;
+    }
+    .hero__rightContainerButton {
+        width: 200px;
+        height: 80px;
+
+        font-size: 2rem;
+    }
+    .hero__spaceSpan {
+        display: inline-block;
+    }
+    .hero__rightContainerMainText {
+        text-align: start;
+    }
+}
+
+#mobileNavigation {
+    display: none;
+}
