@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" href="styles/index.css" />
+        <link rel="stylesheet" href="styles/indexResponsive.css" />
+        <link rel="stylesheet" href="styles/someCommonStyles.css" />
+        <script src="scripts/someCommonScript.js"></script>
+    </head>
+    <body>
+        <div class="gradient"></div>
+        <div class="headerWrapper">
+            <header class="header">
+                <figure class="header__logo">
+                    <img
+                        src="images/logo.svg"
+                        alt="website logo"
+                        class="header__logoPicture"
+                    />
+                    <figcaption>
+                        <h2 class="header__LogoText">Movies</h2>
+                    </figcaption>
+                </figure>
+                <nav class="nav__disappearResponsive">
+                    <ul class="header__navigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="movies.html">Movies</a></li>
+                        <li><a href="orderFilm.html">Order now</a></li>
+                    </ul>
+                </nav>
+                <figure class="header__profile">
+                    <img
+                        src="images/profilePicture.svg"
+                        alt="profile picture"
+                        class="header__profilePicture"
+                    />
+                    <figcaption>
+                        <h2 class="header__userName capitalize">Viox</h2>
+                    </figcaption>
+                </figure>
+                <nav class="nav__mobile">
+                    <img
+                        src="images/Menu.svg"
+                        alt="burger menu"
+                        id="mobileBurgerMenu"
+                    />
+                    <ul class="header__navigation" id="mobileNavigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="movies.html">Movies</a></li>
+                        <li><a href="orderFilm.html">Order now</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <footer id="load-stats"></footer>
+
+        <script src="scripts/index.js"></script>
+        <script src="scripts/activeButtonsScript.js"></script>
+    </body>
+</html>
