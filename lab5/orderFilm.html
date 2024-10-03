@@ -72,6 +72,7 @@
                                 id="filmName"
                                 name="filmName"
                                 placeholder="enter the film name"
+                                required
                             />
                         </div>
 
@@ -105,7 +106,31 @@
                         </button>
                     </form>
                 </div>
-                <div class="innerRightContainer"></div>
+                <div class="innerRightContainer">
+                    <template id="filmCardTemplate">
+                        <div class="filmCard__div">
+                            <h1 class="filmCard__filmName">Film Name</h1>
+                            <div class="filmCard__infoContainer">
+                                <div class="filCard__info">
+                                    Language:
+                                    <span class="filmCardInfo__content">
+                                        Language
+                                    </span>
+                                </div>
+                                <div class="filCard__info">
+                                    Book duration:
+                                    <span class="filmCardInfo__content">
+                                        Duration
+                                    </span>
+                                    days
+                                </div>
+                            </div>
+                            <button class="filmCard__deleteButton">
+                                Remove
+                            </button>
+                        </div>
+                    </template>
+                </div>
             </div>
         </section>
 

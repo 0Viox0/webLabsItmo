@@ -14,38 +14,23 @@ window.addEventListener("submit", (e) => {
 });
 
 const createNewFilmCard = (name, language, duration) => {
-    const filmOrderCardDiv = document.createElement("div");
-    filmOrderCardDiv.className = "filmCard__div";
+    const template = document.getElementById("filmCardTemplate");
+    const clone = document.importNode(template.content, true);
 
-    const filmOrderCardFilmName = document.createElement("h1");
-    filmOrderCardFilmName.className = "filmCard__filmName";
-    filmOrderCardFilmName.textContent = name;
+    const filmOrderCardDiv = clone.querySelector(".filmCard__div");
+    filmOrderCardDiv.querySelector(".filmCard__filmName").textContent = name;
+    filmOrderCardDiv.querySelectorAll(".filmCardInfo__content")[0].textContent =
+        language;
+    filmOrderCardDiv.querySelectorAll(".filmCardInfo__content")[1].textContent =
+        duration;
 
-    const filmOrderCardInfoContainer = document.createElement("div");
-    filmOrderCardInfoContainer.className = "filmCard__infoContainer";
-
-    const filmOrderCardFilmLanguage = document.createElement("div");
-    filmOrderCardFilmLanguage.className = "filCard__info";
-    filmOrderCardFilmLanguage.innerHTML = `Language: <span class="filmCardInfo__content">${language}</span>`;
-
-    const filmOrderCardFilmBookDuration = document.createElement("div");
-    filmOrderCardFilmBookDuration.className = "filCard__info";
-    filmOrderCardFilmBookDuration.innerHTML = `Book duration: <span class="filmCardInfo__content">${duration}</span> days`;
-
-    filmOrderCardInfoContainer.appendChild(filmOrderCardFilmLanguage);
-    filmOrderCardInfoContainer.appendChild(filmOrderCardFilmBookDuration);
-
-    const removeButton = document.createElement("button");
-    removeButton.className = "filmCard__deleteButton";
-    removeButton.textContent = "Remove";
+    const removeButton = filmOrderCardDiv.querySelector(
+        ".filmCard__deleteButton",
+    );
     removeButton.addEventListener("click", () => {
         filmOrderCardDiv.remove();
         removeCardFromLocalStorage(name);
     });
-
-    filmOrderCardDiv.appendChild(filmOrderCardFilmName);
-    filmOrderCardDiv.appendChild(filmOrderCardInfoContainer);
-    filmOrderCardDiv.appendChild(removeButton);
 
     const filmCardsContainer = document.querySelector(".innerRightContainer");
     filmCardsContainer.appendChild(filmOrderCardDiv);
@@ -53,8 +38,13 @@ const createNewFilmCard = (name, language, duration) => {
 
 const saveCardsToLocalStorage = (name, language, duration) => {
     let savedCards = JSON.parse(localStorage.getItem("filmCards"));
-    savedCards.push({ name, language, duration });
-    localStorage.setItem("filmCards", JSON.stringify(savedCards));
+    if (savedCards) {
+        savedCards.push({ name, language, duration });
+        localStorage.setItem("filmCards", JSON.stringify(savedCards));
+    } else {
+        const newCards = [{ name, language, duration }];
+        localStorage.setItem("filmCards", JSON.stringify(newCards));
+    }
 };
 
 const removeCardFromLocalStorage = (name) => {
@@ -65,9 +55,12 @@ const removeCardFromLocalStorage = (name) => {
 
 const loadSavedFilmCards = () => {
     const savedCards = JSON.parse(localStorage.getItem("filmCards"));
-    savedCards.forEach((card) => {
-        createNewFilmCard(card.name, card.language, card.duration);
-    });
+
+    if (savedCards) {
+        savedCards.forEach((card) => {
+            createNewFilmCard(card.name, card.language, card.duration);
+        });
+    }
 };
 
 window.addEventListener("DOMContentLoaded", () => {
