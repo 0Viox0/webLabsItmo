@@ -17,6 +17,10 @@ const createNewFilmCard = (name, language, duration) => {
     const template = document.getElementById("filmCardTemplate");
     const clone = document.importNode(template.content, true);
 
+    if (name.trim() === "") {
+        return;
+    }
+
     const filmOrderCardDiv = clone.querySelector(".filmCard__div");
     filmOrderCardDiv.querySelector(".filmCard__filmName").textContent = name;
     filmOrderCardDiv.querySelectorAll(".filmCardInfo__content")[0].textContent =
