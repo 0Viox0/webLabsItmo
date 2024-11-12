@@ -50,3 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetchFilms();
 });
+
+// TODO: web component
+// TODO: addtional load button
+// TODO: async in js
