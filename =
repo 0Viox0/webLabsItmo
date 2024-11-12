@@ -118,7 +118,9 @@
             <section>
                 <h1 class="listingText">Listing</h1>
                 <div id="preloader" class="preloader"></div>
-                <section id="filmList" class="filmList"></section>
+                <div style="height: auto">
+                    <section id="filmList" class="filmList"></section>
+                </div>
                 <button id="loadMoreButton" class="loadMoreButton">
                     Load More Films
                 </button>

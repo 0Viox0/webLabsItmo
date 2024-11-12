@@ -13,9 +13,10 @@
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(346px, 1fr));
+    gap: 20px;
+
     justify-items: center;
-    gap: 3%;
 }
 
 .preloader {
@@ -26,6 +27,27 @@
     height: 40px;
     animation: spin 2s linear infinite;
     margin: 20px auto;
+}
+
+.loadMoreButton {
+    display: block;
+
+    margin: 100px auto;
+    padding: 10px 20px;
+
+    color: white;
+    font-size: 2rem;
+
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.loadMoreButton:hover {
+    background-color: #666666;
 }
 
 @keyframes spin {

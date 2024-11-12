@@ -1,6 +1,8 @@
 class FilmList extends HTMLElement {
     constructor() {
         super();
+        this.currentOffset = 0;
+        this.limit = 10;
     }
 
     connectedCallback() {
@@ -18,6 +20,11 @@ class FilmList extends HTMLElement {
 
         this.filmListContainer = shadowRoot.getElementById("filmList");
         this.preloader = shadowRoot.getElementById("preloader");
+        this.loadMoreButton = shadowRoot.getElementById("loadMoreButton");
+
+        this.loadMoreButton.addEventListener("click", () =>
+            this.fetchMoreFilms(),
+        );
 
         this.fetchFilms();
     }
@@ -26,9 +33,8 @@ class FilmList extends HTMLElement {
         try {
             this.preloader.style.display = "block";
 
-            const randomId = Math.random() > 0.5 ? 100 : 200;
             const response = await fetch(
-                `https://jsonplaceholder.typicode.com/photos?_start=${randomId}&_limit=10`,
+                `https://jsonplaceholder.typicode.com/photos?_start=${this.currentOffset}&_limit=${this.limit}`,
             );
 
             if (!response.ok) {
@@ -36,7 +42,10 @@ class FilmList extends HTMLElement {
             }
 
             const films = await response.json();
+
             this.renderFilms(films);
+
+            this.currentOffset += this.limit;
         } catch (error) {
             this.displayError("Something went wrong while fetching films.");
         } finally {
@@ -44,15 +53,18 @@ class FilmList extends HTMLElement {
         }
     }
 
+    fetchMoreFilms() {
+        this.fetchFilms();
+    }
+
     renderFilms(films) {
-        this.filmListContainer.innerHTML = "";
         films.forEach((film) => {
             this.filmListContainer.innerHTML += `
-                             <film-card 
-                                     title="${film.title}" 
-                                     thumbnail-link="${film.thumbnailUrl}" 
-                                     alt-img-text="${film.title} film photo">
-                             </film-card>`;
+                <film-card 
+                    title="${film.title}" 
+                    thumbnail-link="${film.thumbnailUrl}" 
+                    alt-img-text="${film.title} film photo">
+                </film-card>`;
         });
     }
 
