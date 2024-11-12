@@ -1,0 +1,126 @@
+.searchBarContainer {
+    width: full;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar {
+    width: 400px;
+    height: 40px;
+
+    background: #d9d9d9;
+    border-radius: 200px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.searchBar__searchIcon {
+    width: 40px;
+    height: 40px;
+
+    margin-left: 10px;
+}
+
+.searchBar__inputFieldContainer {
+    width: 70%;
+    height: full;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    margin-left: 10px;
+}
+
+.searchBar__input {
+    outline: none;
+    border: none;
+
+    background: transparent;
+
+    font-size: 1.3rem;
+}
+
+.searchBar__underline {
+    width: 100%;
+    height: 1px;
+
+    background: black;
+}
+
+.trendingText {
+    font-size: 4rem;
+    color: #d1d1d1;
+
+    text-align: center;
+
+    margin-top: 80px;
+}
+
+.trendingFilmContainer {
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trendingFilm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trendingFilmImage {
+    width: 90%;
+    border-radius: 45px;
+}
+
+.trendingFilmName {
+    font-size: 1.7rem;
+    color: #d1d1d1;
+
+    margin-top: 15px;
+}
+
+.line {
+    width: 90%;
+    height: 1px;
+
+    margin: 40px auto;
+
+    background: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------------- preloader styles ------------------------------*/
+
+.error {
+    font-size: 2em;
+    color: red;
+    text-align: center;
+}
+
+@media only screen and (min-width: 850px) {
+    .trendingFilmName {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 1265px) {
+    .trendingFilmContainer {
+        width: 80%;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
