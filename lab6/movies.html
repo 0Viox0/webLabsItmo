@@ -99,14 +99,32 @@
                 </div>
             </section>
             <div class="line"></div>
+            <film-list></film-list>
+        </section>
+
+        <footer id="load-stats"></footer>
+
+        <!-- template for film cards -->
+        <template id="film-card-template">
+            <!-- <link -->
+            <!--     rel="stylesheet" -->
+            <!--     href="styles/webComponentStyles/filmCardStyles.css" -->
+            <!-- /> -->
+            <div class="filmList__filmCard">
+                <img class="filmCard__filmImage" />
+                <h1 class="filmCard__filmName"></h1>
+                <span class="filmCard__filmDescription">2024/04/01, genre</span>
+            </div>
+        </template>
+
+        <!-- template for film list -->
+        <template id="film-list">
             <section>
                 <h1 class="listingText">Listing</h1>
                 <div id="preloader" class="preloader"></div>
                 <section id="filmList" class="filmList"></section>
             </section>
-        </section>
-
-        <footer id="load-stats"></footer>
+        </template>
 
         <script src="scripts/index.js"></script>
         <script src="scripts/activeButtonsScript.js"></script>

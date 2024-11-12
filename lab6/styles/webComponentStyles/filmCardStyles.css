@@ -1,0 +1,33 @@
+.filmList__filmCard {
+    width: 346px;
+    height: 549px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.filmCard__filmImage {
+    width: 100%;
+    height: 420px;
+    border-radius: 34px;
+}
+
+.filmCard__filmName {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #d1d1d1;
+    margin-top: 15px;
+    margin-bottom: 0;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.filmCard__filmDescription {
+    margin-top: 15px;
+    color: #d1d1d1;
+    font-size: 2rem;
+    text-decoration: underline;
+    font-weight: 400;
+}
