@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #2d2d2d;
+}
+
+.emeraldGradient {
+    width: 1000px;
+    height: 752px;
+
+    position: absolute;
+    left: -30%;
+    top: -40%;
+
+    border-radius: 50%;
+    background-color: rgba(111, 204, 182, 0.5);
+    filter: blur(300px);
+
+    z-index: -20;
+}
+
+.emeraldGradient__Bottom {
+    width: 1000px;
+    height: 752px;
+
+    position: absolute;
+    right: 5%;
+    top: 100%;
+
+    border-radius: 50%;
+    background-color: rgba(111, 204, 182, 0.5);
+    filter: blur(300px);
+
+    z-index: -20;
+}
+
+@media screen and (max-width: 800px) {
+    .emeraldGradient {
+        width: 90%;
+        height: 500px;
+
+        left: 0;
+        top: -35%;
+
+        display: block;
+
+        position: absolute;
+
+        border-radius: 50%;
+        background-color: rgba(111, 204, 182, 0.5);
+        filter: blur(200px);
+
+        z-index: -20;
+    }
+
+    .emeraldGradient__Bottom {
+        display: none;
+    }
+}
