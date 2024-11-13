@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Gradient from "./Gradient";
 import Navbar from "./Navbar";
+import Gradient from "../gradients/Gradient";
+import Footer from "./Footer";
 
 const Layout = () => {
     return (
@@ -8,6 +9,7 @@ const Layout = () => {
             <Gradient />
             <Navbar />
             <Outlet />
+            <Footer />
         </>
     );
 };

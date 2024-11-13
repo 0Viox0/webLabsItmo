@@ -1,5 +1,12 @@
+import { FilmReviewSection, Hero } from "../features/chooseFilm";
+
 const Home = () => {
-    return <div>Home</div>;
+    return (
+        <>
+            <Hero />
+            <FilmReviewSection />
+        </>
+    );
 };
 
 export default Home;
