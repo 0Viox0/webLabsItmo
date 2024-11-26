@@ -1,14 +1,27 @@
+import { useNavigate } from "react-router-dom";
+
 const ListingFilmCard = ({
+    id,
     img,
     title,
     date,
 }: {
+    id: number;
     img: string;
     title: string;
     date: string;
 }) => {
+    const navigate = useNavigate();
+
+    const handleFilmOnClick = () => {
+        navigate(`/about?id=${id}`);
+    };
+
     return (
-        <figure>
+        <figure
+            className="hover:cursor-pointer hover:opacity-50"
+            onClick={handleFilmOnClick}
+        >
             <img
                 src={img}
                 alt="film image"

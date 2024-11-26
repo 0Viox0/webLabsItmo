@@ -1,5 +1,7 @@
+import { FilmAboutInfo } from "../features/about";
+
 const About = () => {
-    return <div>About</div>;
+    return <FilmAboutInfo />;
 };
 
 export default About;

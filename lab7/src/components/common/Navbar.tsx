@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <nav
             className="flex justify-between items-center mt-[30px] md:mx-[55px] mx-[30px]
-                       md:text-[1.625rem] text-[1.2rem] text-[#D1D1D1]"
+                       md:text-[1.625rem] text-[1.2rem] text-[#D1D1D1] z-20"
         >
             <SiteLogo />
             <DesktopNavLinks navigationLinks={navigationLinks} />

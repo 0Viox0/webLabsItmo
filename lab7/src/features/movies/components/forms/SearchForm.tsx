@@ -1,6 +1,13 @@
+import { ChangeEvent } from "react";
 import { assets } from "../../../../constants/assets";
 
-const SearchForm = () => {
+const SearchForm = ({
+    value,
+    onChange,
+}: {
+    value: string;
+    onChange: (ev: ChangeEvent<HTMLInputElement>) => void;
+}) => {
     return (
         <div
             className="flex justify-start items-center 
@@ -18,6 +25,8 @@ const SearchForm = () => {
                     className="outline-none bg-transparent sm:w-[232px] w-full"
                     placeholder="search a film..."
                     maxLength={30}
+                    value={value}
+                    onChange={onChange}
                 />
                 <div className="w-full h-[1px] bg-black bg-opacity-[0.5]"></div>
             </div>

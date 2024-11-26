@@ -41,8 +41,9 @@ const MobileBurgerMenuButton = ({
             {isMenuOpened && (
                 <div
                     className="flex flex-col justify-start items-center space-y-[10px]
-                                   absolute right-0 top-[50px] p-[10px]
-                                   border-[1px] border-[#888888] rounded-[6px]"
+                               absolute right-0 top-[50px] p-[10px]
+                               border-[1px] border-[#888888] rounded-[6px]
+                               bg-gray-800"
                 >
                     {navigationLinks.map((linkInfo, id) => (
                         <NavbarLink

@@ -1,3 +1,4 @@
+import { ChangeEvent, useState } from "react";
 import {
     ChooseFilmSearchForm,
     FilmListings,
@@ -5,11 +6,20 @@ import {
 } from "../features/movies";
 
 const Movies = () => {
+    const [formSearchValue, setFormSearchValue] = useState("");
+
+    const handleOnchange = (ev: ChangeEvent<HTMLInputElement>) => {
+        setFormSearchValue(ev.target.value);
+    };
+
     return (
         <>
-            <ChooseFilmSearchForm />
-            <TrendingFilms />
-            <FilmListings />
+            <ChooseFilmSearchForm
+                value={formSearchValue}
+                onChange={handleOnchange}
+            />
+            {formSearchValue === "" && <TrendingFilms />}
+            <FilmListings searchValue={formSearchValue} />
         </>
     );
 };
