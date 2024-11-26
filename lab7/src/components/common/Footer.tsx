@@ -32,7 +32,7 @@ const Footer = () => {
         <footer
             className="flex md:flex-row flex-col justify-between items-center md:px-[112px]
                        w-full md:h-[240px] h-auto md:py-auto py-[30px] bg-[#3F3F3F]
-                       md:space-y-0 space-y-[40px]"
+                       md:space-y-0 space-y-[40px] mt-auto"
         >
             <SiteLogo className="text-[1.5rem] text-[#d1d1d1]" />
             <div

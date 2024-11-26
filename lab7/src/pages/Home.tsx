@@ -1,4 +1,4 @@
-import { FilmReviewSection, Hero } from "../features/chooseFilm";
+import { FilmReviewSection, Hero } from "../features/landing";
 
 const Home = () => {
     return (

@@ -11,8 +11,8 @@ body {
     height: 752px;
 
     position: absolute;
-    left: -30%;
-    top: -40%;
+    left: -300px;
+    top: -500px;
 
     border-radius: 50%;
     background-color: rgba(111, 204, 182, 0.5);
@@ -26,14 +26,41 @@ body {
     height: 752px;
 
     position: absolute;
-    right: 5%;
-    top: 100%;
+    right: -5%;
+    top: 1200px;
 
     border-radius: 50%;
     background-color: rgba(111, 204, 182, 0.5);
     filter: blur(300px);
 
     z-index: -20;
+}
+
+.blueTextGradient {
+    background: linear-gradient(to right, #526beb, #79acb2);
+    background-clip: text;
+    color: transparent;
+}
+
+.loadingThingy {
+    width: 60px;
+    height: 60px;
+    border-top: 10px solid #646ebe;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-radius: 50%;
+
+    animation: rotatingAnimation 1s linear infinite;
+}
+
+@keyframes rotatingAnimation {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -58,10 +85,4 @@ body {
     .emeraldGradient__Bottom {
         display: none;
     }
-}
-
-.blueTextGradient {
-    background: linear-gradient(to right, #526beb, #79acb2);
-    background-clip: text;
-    color: transparent;
 }

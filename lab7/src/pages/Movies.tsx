@@ -1,5 +1,17 @@
+import {
+    ChooseFilmSearchForm,
+    FilmListings,
+    TrendingFilms,
+} from "../features/movies";
+
 const Movies = () => {
-    return <div>Movies</div>;
+    return (
+        <>
+            <ChooseFilmSearchForm />
+            <TrendingFilms />
+            <FilmListings />
+        </>
+    );
 };
 
 export default Movies;

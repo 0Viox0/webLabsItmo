@@ -5,12 +5,12 @@ import Footer from "./Footer";
 
 const Layout = () => {
     return (
-        <>
+        <div className="flex min-h-[100vh] flex-col relative overflow-hidden">
             <Gradient />
             <Navbar />
             <Outlet />
             <Footer />
-        </>
+        </div>
     );
 };
 
